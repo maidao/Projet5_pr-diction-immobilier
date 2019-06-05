@@ -1,0 +1,11 @@
+Votre mission :
+
+Une agence immobilière de Lyon souhaite avoir une application qui lui permette de connaître le prix d'un appartement connaissant le nombre de pièces, la superficie et l'adresse dans la ville de Lyon. Dans un second temps, elle souhaite pouvoir utiliser ce modèle pour savoir si les offres de ventes sont sous-évaluées ou surévaluées. Pour pouvoir évaluer la qualité du modèle créé, vous fournirez un comparatif de plusieurs modèles que vous avez entraînés.
+
+Idées de modèles à utiliser :
+
+    Régression linéaire multivariée
+    Arbres de décision
+    k plus proches voisins ...
+
+
