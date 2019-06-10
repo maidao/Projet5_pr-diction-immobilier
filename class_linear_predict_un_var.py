@@ -104,11 +104,11 @@ class Linear_predict_un_var:
 
         plt.show()
 
-    def un_variabe_superficie_valeur_fonciere(self, data):
+    def un_variabe_distance_to_centre_valeur_fonciere(self, data):
         #data.plot.scatter(x='code_postal', y='valeur_fonciere')
 
-        X = pd.DataFrame(data['code_postal'])
-        Y = pd.DataFrame(data['prix_m2'])
+        X = pd.DataFrame(data['distance_to_centre'])
+        Y = pd.DataFrame(data['valeur_fonciere'])
 
         model = linear_model.LinearRegression()
         model.fit(X, Y)
@@ -144,7 +144,7 @@ class Linear_predict_un_var:
         print("Variance score: %.2f" % r)
         print("mean_squared_error: %.2f " % mse)
 
-        plt.figure("model test entre valeur_fonciere et la superficie")
+        plt.figure("model test entre valeur_fonciere et distance_to_centre")
         plt.scatter(X_test, Y_test, c='black')
         plt.plot(X_test, Y_pred, color='blue', linewidth=3)
 

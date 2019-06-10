@@ -11,7 +11,7 @@ class Linear_predict_multi_var:
     def multi_variabe_valeur_fonciere_avec_surface_et_nb_piece(self, data):
         # tao mot dataframe chi gom cac bien giai tich
 
-        data_X = data[['surface_reelle_bati', 'nombre_pieces_principales']]
+        data_X = data[['surface_reelle_bati', 'nombre_pieces_principales','distance_to_centre']]
         data_X.plot(kind='box', subplots=True, layout=(3, 3), sharex=False, sharey=False)
 
         X = data_X.values
@@ -36,7 +36,7 @@ class Linear_predict_multi_var:
 
         elev = 43.5
         azim = -110
-        plot_figs(1, elev, azim, X_train, Y_train, model_test)
+        #plot_figs(1, elev, azim, X_train, Y_train, model_test)
 
 
 
