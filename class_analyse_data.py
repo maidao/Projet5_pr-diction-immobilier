@@ -1,5 +1,6 @@
 import pandas as pd
 from list_constans import *
+from distance import *
 
 
 class Clean_data:
@@ -29,6 +30,7 @@ class Clean_data:
         data['prix_m2'] = round(data.valeur_fonciere / data.surface_reelle_bati)
         data = data[(data['prix_m2'] >= 500) & (data['prix_m2'] <= 10000)]
         data = data[(data['nombre_pieces_principales'] <= 8)]
+        data['distance_to_centre'] = compute_distance(data.longitude, data.latitude)
 
         return data
 

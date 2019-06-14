@@ -4,7 +4,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
-from nhap import *
+
 
 class Linear_predict_multi_var:
 
@@ -19,28 +19,28 @@ class Linear_predict_multi_var:
 
         model = linear_model.LinearRegression()
         model.fit(X, Y)
-        print(pd.DataFrame({"Name":data_X.columns, "Coefficients":model.coef_}).sort_values(by = 'Coefficients'))
-        print('b = ',model.intercept_)
-        print('score = ', model.score(X,Y))
+        #print(pd.DataFrame({"Name":data_X.columns, "Coefficients":model.coef_}).sort_values(by = 'Coefficients'))
+        #print('b = ',model.intercept_)
+        #print('score = ', model.score(X,Y))
+        return model
 
-        X_train = X[:-1000]
-        X_test = X[-1000:]
+        #X_train = X[:-1000]
+        #X_test = X[-1000:]
 
-        Y_train = Y[:-1000]
-        Y_test = Y[-1000:]
+        #Y_train = Y[:-1000]
+        #Y_test = Y[-1000:]
 
-        model_test = linear_model.LinearRegression()
-        model_test.fit(X_train, Y_train)
+        #model_test = linear_model.LinearRegression()
+        #model_test.fit(X_train, Y_train)
 
-        Y_pred = model_test.predict(X_test)
+        #Y_pred = model_test.predict(X_test)
 
         elev = 43.5
         azim = -110
         #plot_figs(1, elev, azim, X_train, Y_train, model_test)
 
+        #plt.show()
 
-
-        plt.show()
 
 
 
